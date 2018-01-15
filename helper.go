@@ -15,8 +15,9 @@ func main() {
 	vehicles := readVehicles()
 	vehicleGroups := readVehicleGroups()
 
-	println(fmt.Sprintf("%+v", vehicles))
-	println(fmt.Sprintf("%+v", vehicleGroups))
+	parsed := parseVehicles(vehicles, vehicleGroups)
+
+	println(fmt.Sprintf("%+v", parsed))
 }
 
 func readVehicles() (vehicle []Vehicle) {
@@ -36,6 +37,12 @@ func readVehicleGroups() (vehicleGroup []VehicleGroup) {
 		panic(err)
 	}
 
+	// do work here
+
+	return
+}
+
+func parseVehicles(vehicles []Vehicle, groups []VehicleGroup) (todo interface{}) {
 	// do work here
 
 	return
